@@ -1,0 +1,14 @@
+<svg width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- crown -->
+    <path d="M40 26 L46 14 L52 24 L60 10 L68 24 L74 14 L80 26 L78 32 L42 32 Z" fill="#E8C96A"/>
+    <!-- house body -->
+    <path d="M60 34 L100 64 L88 64 L88 100 L32 100 L32 64 L20 64 Z" fill="#FFFFFF"/>
+    <rect x="48" y="76" width="24" height="24" rx="2" fill="#0F2647"/>
+    <!-- gold upward arrow overlay -->
+    <path d="M38 78 L56 60 L66 70 L86 48" stroke="#E8C96A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M86 48 L86 60 M86 48 L74 48" stroke="#E8C96A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="118" y="62" font-family="Playfair Display, Georgia, serif" font-weight="800" font-size="34" letter-spacing="2" fill="#FFFFFF">PREMIUM</text>
+  <text x="118" y="86" font-family="DM Sans, Arial, sans-serif" font-weight="500" font-size="16" letter-spacing="1" fill="#E8C96A">Qiymətləndirmə MMC</text>
+</svg>
