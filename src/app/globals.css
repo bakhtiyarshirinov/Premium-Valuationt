@@ -41,6 +41,21 @@ body {
   border: 1px solid rgba(232, 201, 106, 0.2);
 }
 
+/* team member card */
+.team-card {
+  background: #ffffff;
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  box-shadow: 0 2px 16px -4px rgba(15, 38, 71, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover {
+  border-color: rgba(201, 162, 39, 0.55);
+  box-shadow: 0 14px 40px -8px rgba(15, 38, 71, 0.18),
+              0 0 0 1px rgba(201, 162, 39, 0.22);
+  transform: translateY(-4px);
+}
+
 .text-gradient-gold {
   background: linear-gradient(135deg, #e8c96a, #c9a227);
   -webkit-background-clip: text;

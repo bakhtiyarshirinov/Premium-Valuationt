@@ -311,17 +311,20 @@ const az: SiteContent = {
       { title: "Bütün Azərbaycan üzrə xidmət", desc: "Bakı və regionlarda əmlak ekspertizası" },
     ],
   },
-  // PLACEHOLDER — client will provide real team photos and names later.
   team: {
     eyebrow: "Komandamız",
     title: "Peşəkar Komandamızla Tanış Olun",
     subtitle:
       "Sahə üzrə təcrübəli mütəxəssislərimiz sizə ən dəqiq və etibarlı xidməti təqdim edir",
     members: [
-      { id: "member-1", name: "Ad Soyad", role: "Baş Qiymətləndirici", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-2", name: "Ad Soyad", role: "Maliyyə Analitiki", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-3", name: "Ad Soyad", role: "Sahə Eksperti", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-4", name: "Ad Soyad", role: "Müştəri Əlaqələri", imageUrl: null }, // PLACEHOLDER — replace with real name
+      // imageUrl: set to "/images/team/<slug>.jpg" when photo is ready
+      { id: "edalat-shirinov",       name: "Ədalət Şirinov",       role: "Direktor / Təsisçi",           imageUrl: null },
+      { id: "faqan-safaraliyev",     name: "Fəqan Səfərəliyev",    role: "Baş Qiymətləndirici",          imageUrl: null },
+      { id: "nahid-ibrahim",         name: "Nahid İbrahim",         role: "Baş Mühasib",                  imageUrl: null },
+      { id: "sahin-allahverdiyev",   name: "Şahin Allahverdiyev",  role: "Qiymətləndirici Köməkçisi",    imageUrl: null },
+      { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Qiymətləndirici Köməkçisi",    imageUrl: null },
+      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Müştəri Əlaqələri",            imageUrl: null },
+      { id: "aysel-rahimova",        name: "Aysel Rəhimova",       role: "Office Manager",               imageUrl: null },
     ],
   },
   newsSection: {
@@ -609,17 +612,20 @@ const ru: SiteContent = {
       { title: "Услуги по всему Азербайджану", desc: "Экспертиза в Баку и регионах" },
     ],
   },
-  // PLACEHOLDER — client will provide real team photos and names later.
   team: {
     eyebrow: "Наша команда",
     title: "Познакомьтесь с нашей командой",
     subtitle:
       "Опытные специалисты в каждой области предоставляют вам максимально точную и надёжную услугу",
     members: [
-      { id: "member-1", name: "Имя Фамилия", role: "Главный оценщик", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-2", name: "Имя Фамилия", role: "Финансовый аналитик", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-3", name: "Имя Фамилия", role: "Эксперт по объектам", imageUrl: null }, // PLACEHOLDER — replace with real name
-      { id: "member-4", name: "Имя Фамилия", role: "Менеджер по работе с клиентами", imageUrl: null }, // PLACEHOLDER — replace with real name
+      // imageUrl: set to "/images/team/<slug>.jpg" when photo is ready
+      { id: "edalat-shirinov",       name: "Ədalət Şirinov",       role: "Директор / Основатель",        imageUrl: null },
+      { id: "faqan-safaraliyev",     name: "Fəqan Səfərəliyev",    role: "Главный оценщик",              imageUrl: null },
+      { id: "nahid-ibrahim",         name: "Nahid İbrahim",         role: "Главный бухгалтер",            imageUrl: null },
+      { id: "sahin-allahverdiyev",   name: "Şahin Allahverdiyev",  role: "Помощник оценщика",            imageUrl: null },
+      { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Помощник оценщика",            imageUrl: null },
+      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Менеджер по работе с клиентами", imageUrl: null },
+      { id: "aysel-rahimova",        name: "Aysel Rəhimova",       role: "Офис-менеджер",                imageUrl: null },
     ],
   },
   newsSection: {

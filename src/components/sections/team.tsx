@@ -1,7 +1,7 @@
 "use client";
 
+import { Crown } from "lucide-react";
 import { useLocale } from "@/components/locale-provider";
-import { GlassCard } from "@/components/glass-card";
 import { TeamAvatar } from "@/components/team-avatar";
 import { SectionReveal, StaggerGroup, StaggerItem } from "@/components/section-reveal";
 
@@ -21,16 +21,30 @@ export function Team() {
           <p className="mt-4 text-muted text-base md:text-lg">{t.team.subtitle}</p>
         </SectionReveal>
 
-        <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        {/* flex-wrap + justify-center centres the orphaned last row regardless of count */}
+        <StaggerGroup className="flex flex-wrap justify-center gap-7">
           {t.team.members.map((member) => (
-            <StaggerItem key={member.id}>
-              <GlassCard className="h-full flex flex-col items-center text-center">
+            <StaggerItem
+              key={member.id}
+              className="w-full sm:w-[calc(50%-14px)] lg:w-[calc(25%-21px)]"
+            >
+              <div className="team-card rounded-3xl p-7 flex flex-col items-center text-center h-full">
                 <TeamAvatar member={member} />
-                <h3 className="font-display text-lg font-semibold text-navy mt-5">
+
+                {/* gold divider separates avatar from text */}
+                <div className="w-10 h-px bg-gold/40 mt-5 mb-4" />
+
+                <h3 className="font-display text-lg font-semibold text-navy leading-snug">
                   {member.name}
                 </h3>
-                <p className="text-gold text-sm font-medium mt-1">{member.role}</p>
-              </GlassCard>
+
+                <p className="text-gold text-sm font-medium mt-1.5 flex items-center justify-center gap-1.5">
+                  {member.id === "edalat-shirinov" && (
+                    <Crown size={13} className="text-gold/70 shrink-0" />
+                  )}
+                  {member.role}
+                </p>
+              </div>
             </StaggerItem>
           ))}
         </StaggerGroup>
