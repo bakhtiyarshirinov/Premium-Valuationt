@@ -52,8 +52,18 @@ export function RequestForm() {
     setTimeout(() => setToast(null), 3000);
   }
 
+  function saveToDb() {
+    // Fire-and-forget: saves to DB in parallel; never blocks or changes UI behaviour.
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...form, locale }),
+    }).catch(() => {});
+  }
+
   function handleWhatsapp() {
     if (!validate()) return;
+    saveToDb();
     const url = buildWhatsappUrl(form, locale);
     window.open(url, "_blank", "noopener,noreferrer");
     showToast(t.contact.form.successToast);
@@ -61,6 +71,7 @@ export function RequestForm() {
 
   function handleEmail() {
     if (!validate()) return;
+    saveToDb();
     const url = buildMailtoUrl(form, locale);
     window.location.href = url;
   }

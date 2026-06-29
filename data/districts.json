@@ -1,0 +1,44 @@
+[
+  {
+    "id": "nasimi",
+    "labelAz": "Nəsimi",
+    "labelRu": "Насими",
+    "pricePerSqm": 1700,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "id": "sabail",
+    "labelAz": "Səbail",
+    "labelRu": "Сабаил",
+    "pricePerSqm": 1900,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "id": "narimanov",
+    "labelAz": "Nərimanov",
+    "labelRu": "Нариманов",
+    "pricePerSqm": 1350,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "id": "xetai",
+    "labelAz": "Xətai",
+    "labelRu": "Хатаи",
+    "pricePerSqm": 1200,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "id": "binagadi",
+    "labelAz": "Binəqədi",
+    "labelRu": "Бинагади",
+    "pricePerSqm": 950,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "id": "surakhani",
+    "labelAz": "Suraxanı",
+    "labelRu": "Сураханы",
+    "pricePerSqm": 850,
+    "updatedAt": "2026-06-29T00:00:00.000Z"
+  }
+]

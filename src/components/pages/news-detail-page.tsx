@@ -7,10 +7,11 @@ import { Footer } from "@/components/footer";
 import { SectionReveal } from "@/components/section-reveal";
 import { useLocale } from "@/components/locale-provider";
 import { formatDate } from "@/lib/format-date";
+import { postToArticle, type DbNewsPost } from "@/lib/news-store";
 
-export function NewsDetailPage({ slug }: { slug: string }) {
-  const { t, locale } = useLocale();
-  const article = t.news.find((a) => a.slug === slug) ?? t.news[0];
+export function NewsDetailPage({ post }: { post: DbNewsPost }) {
+  const { locale, t } = useLocale();
+  const article = postToArticle(post, locale);
 
   return (
     <>
