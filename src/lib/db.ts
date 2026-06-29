@@ -13,5 +13,8 @@ export function getSql() {
         "Vercel Environment Variables (production). See setup instructions."
     );
   }
-  return neon(url);
+  // Disable Next.js fetch cache so DB reads are always fresh.
+  // Without this, the Neon HTTP driver's fetches get cached by React/Next.js
+  // and public routes return stale (or empty) results.
+  return neon(url, { fetchOptions: { cache: "no-store" } });
 }

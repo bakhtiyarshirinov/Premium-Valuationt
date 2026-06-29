@@ -4,7 +4,7 @@ import { content } from "@/lib/content";
 const baseUrl = "https://premiumqiymetlendirme.az";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/xidmetler", "/haqqimizda", "/xeberler", "/elaqe"].map((path) => ({
+  const staticRoutes = ["", "/xidmetler", "/haqqimizda", "/xeberler", "/elaqe", "/estimate"].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
   }));

@@ -29,6 +29,7 @@ export function Navbar() {
     { href: "/xidmetler", label: t.nav.services },
     { href: "/haqqimizda", label: t.nav.about },
     { href: "/xeberler", label: t.nav.news },
+    { href: "/estimate", label: t.nav.calculator },
     { href: "/elaqe", label: t.nav.contact },
   ];
 

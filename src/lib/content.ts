@@ -54,6 +54,7 @@ interface SiteContent {
     about: string;
     news: string;
     contact: string;
+    calculator: string;
     cta: string;
   };
   hero: {
@@ -168,6 +169,7 @@ const az: SiteContent = {
     about: "Haqqımızda",
     news: "Xəbərlər",
     contact: "Əlaqə",
+    calculator: "Kalkulyator",
     cta: "Sifariş et",
   },
   hero: {
@@ -465,6 +467,7 @@ const ru: SiteContent = {
     about: "О нас",
     news: "Новости",
     contact: "Контакты",
+    calculator: "Калькулятор",
     cta: "Заказать",
   },
   hero: {

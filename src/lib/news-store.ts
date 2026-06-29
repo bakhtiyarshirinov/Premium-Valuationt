@@ -42,7 +42,16 @@ function toPost(row: Row): DbNewsPost {
     excerptRu: row.excerpt_ru,
     bodyAz: row.body_az,
     bodyRu: row.body_ru,
-    publishedAt: String(row.published_at).slice(0, 10), // YYYY-MM-DD
+    publishedAt: (() => {
+      // Neon returns `date` columns as JS Date objects anchored at local midnight,
+      // so UTC methods return the previous day in negative-offset zones.
+      // Use local-time accessors to recover the original calendar date.
+      const d = new Date(row.published_at as string | Date);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${y}-${m}-${day}`;
+    })(), // YYYY-MM-DD
     createdAt: new Date(row.created_at).toISOString(),
     updatedAt: new Date(row.updated_at).toISOString(),
   };

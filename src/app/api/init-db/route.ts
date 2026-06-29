@@ -74,9 +74,55 @@ export async function GET(request: Request) {
       ON CONFLICT (id) DO NOTHING
     `;
 
+    // Seed news posts (ON CONFLICT = safe to re-run)
+    await sql`
+      INSERT INTO news_posts (slug, title_az, title_ru, excerpt_az, excerpt_ru, body_az, body_ru, published_at) VALUES
+      (
+        'bakida-dasinmaz-emlak-bazarinda-2026-ci-ilde-olculu-artim',
+        'Bakıda daşınmaz əmlak bazarında 2026-cı ildə ölçülü artım',
+        'Bakıda daşınmaz əmlak bazarında 2026-cı ildə ölçülü artım',
+        'Azərbaycan Qiymətləndiricilər Cəmiyyətinin məlumatına görə, 2026-cı ilin birinci rübündə Bakıda mənzil qiymətləri artmaqda davam edib, lakin əvvəlki illərlə müqayisədə daha ölçülü templə.',
+        'Azərbaycan Qiymətləndiricilər Cəmiyyətinin məlumatına görə, 2026-cı ilin birinci rübündə Bakıda mənzil qiymətləri artmaqda davam edib, lakin əvvəlki illərlə müqayisədə daha ölçülü templə.',
+        'Azərbaycan Qiymətləndiricilər Cəmiyyətinin məlumatına görə, 2026-cı ilin birinci rübündə Bakıda mənzil qiymətləri artmaqda davam edib, lakin əvvəlki illərlə müqayisədə daha ölçülü templə. Yeni tikili mənzillərdə artım dekabr ayı ilə müqayisədə təxminən 3,6%, ikinci əl bazarında isə təxminən 2,4% olub.' || E'\n\n' || 'Ekspertlər proqnozlaşdırır ki, il ərzində yeni tikililərdə ümumi artım 11–16%, ikinci əl bazarında isə 6–8% təşkil edə bilər. Ən nəzərəçarpan artım Səbail, Nəsimi və Yasamal rayonlarında qeydə alınıb.',
+        'Azərbaycan Qiymətləndiricilər Cəmiyyətinin məlumatına görə, 2026-cı ilin birinci rübündə Bakıda mənzil qiymətləri artmaqda davam edib, lakin əvvəlki illərlə müqayisədə daha ölçülü templə. Yeni tikili mənzillərdə artım dekabr ayı ilə müqayisədə təxminən 3,6%, ikinci əl bazarında isə təxminən 2,4% olub.' || E'\n\n' || 'Ekspertlər proqnozlaşdırır ki, il ərzində yeni tikililərdə ümumi artım 11–16%, ikinci əl bazarında isə 6–8% təşkil edə bilər. Ən nəzərəçarpan artım Səbail, Nəsimi və Yasamal rayonlarında qeydə alınıb.',
+        '2026-04-15'
+      ),
+      (
+        'bakinin-rayonlari-uzre-emlak-qiymetlerinde-liderler',
+        'Bakının rayonları üzrə əmlak qiymətlərində liderlər',
+        'Bakının rayonları üzrə əmlak qiymətlərində liderlər',
+        'Bazar məlumatlarına əsasən, Bakıda ən yüksək daşınmaz əmlak qiymətləri Səbail, Nəsimi və Yasamal rayonlarında, eləcə də şəhərin tarixi hissəsində saxlanılır.',
+        'Bazar məlumatlarına əsasən, Bakıda ən yüksək daşınmaz əmlak qiymətləri Səbail, Nəsimi və Yasamal rayonlarında, eləcə də şəhərin tarixi hissəsində saxlanılır.',
+        'Bazar məlumatlarına əsasən, Bakıda ən yüksək daşınmaz əmlak qiymətləri Səbail, Nəsimi və Yasamal rayonlarında, eləcə də şəhərin tarixi hissəsində saxlanılır. Eyni zamanda, Xətai, Binəqədi və Suraxanı rayonlarında nisbətən əlçatan təkliflər tapmaq mümkündür — bu rayonlar aşağı giriş həddi və orta müddətli perspektivdə dəyər artımı potensialı ilə alıcıları cəlb edir.' || E'\n\n' || 'Ev almaq üçün rayon seçərkən təkcə cari kvadratmetr qiymətini deyil, sosial və nəqliyyat infrastrukturunun inkişaf səviyyəsini də nəzərə almaq vacibdir.',
+        'Bazar məlumatlarına əsasən, Bakıda ən yüksək daşınmaz əmlak qiymətləri Səbail, Nəsimi və Yasamal rayonlarında, eləcə də şəhərin tarixi hissəsində saxlanılır. Eyni zamanda, Xətai, Binəqədi və Suraxanı rayonlarında nisbətən əlçatan təkliflər tapmaq mümkündür — bu rayonlar aşağı giriş həddi və orta müddətli perspektivdə dəyər artımı potensialı ilə alıcıları cəlb edir.' || E'\n\n' || 'Ev almaq üçün rayon seçərkən təkcə cari kvadratmetr qiymətini deyil, sosial və nəqliyyat infrastrukturunun inkişaf səviyyəsini də nəzərə almaq vacibdir.',
+        '2026-05-10'
+      ),
+      (
+        'xarici-alicilarin-azerbaycan-emlakina-maragi-artmaqda-davam-edir',
+        'Xarici alıcıların Azərbaycan əmlakına marağı artmaqda davam edir',
+        'Xarici alıcıların Azərbaycan əmlakına marağı artmaqda davam edir',
+        '2026-cı ildə xarici alıcıların Azərbaycanın, ilk növbədə Bakı və sahil rayonlarının daşınmaz əmlak bazarına marağı nəzərəçarpan dərəcədə artıb.',
+        '2026-cı ildə xarici alıcıların Azərbaycanın, ilk növbədə Bakı və sahil rayonlarının daşınmaz əmlak bazarına marağı nəzərəçarpan dərəcədə artıb.',
+        '2026-cı ildə xarici alıcıların Azərbaycanın, ilk növbədə Bakı və sahil rayonlarının daşınmaz əmlak bazarına marağı nəzərəçarpan dərəcədə artıb. Cəlbediciliyin əsas amilləri arasında bazarın nisbi sabitliyi, regionun digər ölkələri ilə müqayisədə daha yumşaq kreditləşmə şərtləri və fərdi investorlar üçün əlçatan giriş həddi qeyd olunur.' || E'\n\n' || 'Ekspertlər bildirir ki, Bakı ətrafındaki sahil zonası və inkişaf edən kənd ərazilər ən yüksək artım potensialına malikdir.',
+        '2026-cı ildə xarici alıcıların Azərbaycanın, ilk növbədə Bakı və sahil rayonlarının daşınmaz əmlak bazarına marağı nəzərəçarpan dərəcədə artıb. Cəlbediciliyin əsas amilləri arasında bazarın nisbi sabitliyi, regionun digər ölkələri ilə müqayisədə daha yumşaq kreditləşmə şərtləri və fərdi investorlar üçün əlçatan giriş həddi qeyd olunur.' || E'\n\n' || 'Ekspertlər bildirir ki, Bakı ətrafındaki sahil zonası və inkişaf edən kənd ərazilər ən yüksək artım potensialına malikdir.',
+        '2026-04-08'
+      ),
+      (
+        'alqi-satqidan-evvel-emlakin-qiymetlendirilmesine-duzgun-yanasma',
+        'Alqı-satqıdan əvvəl əmlakın qiymətləndirilməsinə düzgün yanaşma',
+        'Alqı-satqıdan əvvəl əmlakın qiymətləndirilməsinə düzgün yanaşma',
+        'Əmlak əməliyyatından əvvəl obyektin təxmini bazar dəyərini bilmək vacibdir — bu, satışda ucuz qiymətə razılaşmaqdan və ya alışda artıq ödəməkdən qaçmağa kömək edir.',
+        'Əmlak əməliyyatından əvvəl obyektin təxmini bazar dəyərini bilmək vacibdir — bu, satışda ucuz qiymətə razılaşmaqdan və ya alışda artıq ödəməkdən qaçmağa kömək edir.',
+        'Əmlak əməliyyatından əvvəl obyektin təxmini bazar dəyərini bilmək vacibdir — bu, satışda ucuz qiymətə razılaşmaqdan və ya alışda artıq ödəməkdən qaçmağa kömək edir. İlkin oriyentir saytımızdaki onlayn kalkulyator vasitəsilə əldə edilə bilər, o, sahəni, rayonu, vəziyyəti və əmlak növünü nəzərə alır.' || E'\n\n' || 'Bununla belə, qeyd etmək lazımdır ki, hüquqi qüvvəyə malik rəsmi qiymətləndirməni — bank, notarius və ya məhkəmə üçün — yalnız Qiymətləndiricilər Palatasının üzvü olan sertifikatlı qiymətləndirici həyata keçirə bilər. Rəsmi qiymətləndirmə hesabatına ehtiyacınız varsa, saytda hesablamadan sonra bizimlə WhatsApp vasitəsilə əlaqə saxlaya bilərsiniz.',
+        'Əmlak əməliyyatından əvvəl obyektin təxmini bazar dəyərini bilmək vacibdir — bu, satışda ucuz qiymətə razılaşmaqdan və ya alışda artıq ödəməkdən qaçmağa kömək edir. İlkin oriyentir saytımızdaki onlayn kalkulyator vasitəsilə əldə edilə bilər, o, sahəni, rayonu, vəziyyəti və əmlak növünü nəzərə alır.' || E'\n\n' || 'Bununla belə, qeyd etmək lazımdır ki, hüquqi qüvvəyə malik rəsmi qiymətləndirməni — bank, notarius və ya məhkəmə üçün — yalnız Qiymətləndiricilər Palatasının üzvü olan sertifikatlı qiymətləndirici həyata keçirə bilər. Rəsmi qiymətləndirmə hesabatına ehtiyacınız varsa, saytda hesablamadan sonra bizimlə WhatsApp vasitəsilə əlaqə saxlaya bilərsiniz.',
+        '2026-06-20'
+      )
+      ON CONFLICT (slug) DO NOTHING
+    `;
+
     return Response.json({
       ok: true,
-      message: "Tables created and districts seeded. Run once — idempotent.",
+      message: "Tables created, districts and news seeded. Run once — idempotent.",
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);

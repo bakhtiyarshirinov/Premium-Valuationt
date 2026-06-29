@@ -43,6 +43,7 @@ export function Footer() {
             <li><Link href="/xidmetler" className="hover:text-gold transition-colors">{t.nav.services}</Link></li>
             <li><Link href="/haqqimizda" className="hover:text-gold transition-colors">{t.nav.about}</Link></li>
             <li><Link href="/xeberler" className="hover:text-gold transition-colors">{t.nav.news}</Link></li>
+            <li><Link href="/estimate" className="hover:text-gold transition-colors">{t.nav.calculator}</Link></li>
             <li><Link href="/elaqe" className="hover:text-gold transition-colors">{t.nav.contact}</Link></li>
           </ul>
         </div>
