@@ -319,11 +319,11 @@ const az: SiteContent = {
     members: [
       // imageUrl: set to "/images/team/<slug>.jpg" when photo is ready
       { id: "edalat-shirinov",       name: "Ədalət Şirinov",       role: "Direktor / Təsisçi",           imageUrl: null },
+      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Direktor muavini",            imageUrl: null },
       { id: "faqan-safaraliyev",     name: "Fəqan Səfərəliyev",    role: "Baş Qiymətləndirici",          imageUrl: null },
       { id: "nahid-ibrahim",         name: "Nahid İbrahimov",         role: "Baş Mühasib",                  imageUrl: null },
       { id: "sahin-allahverdiyev",   name: "Şahin Allahverdiyev",  role: "Qiymətləndirici Köməkçisi",    imageUrl: null },
       { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Qiymətləndirici Köməkçisi",    imageUrl: null },
-      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Direktor muavini",            imageUrl: null },
       { id: "aysel-rahimova",        name: "Aysel Qurbanova",       role: "Office Manager",               imageUrl: null },
     ],
   },
