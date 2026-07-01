@@ -620,11 +620,12 @@ const ru: SiteContent = {
     members: [
       // imageUrl: set to "/images/team/<slug>.jpg" when photo is ready
       { id: "edalat-shirinov",       name: "Ədalət Şirinov",       role: "Директор / Основатель",        imageUrl: null },
+      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Заместитель директора",        imageUrl: null },
       { id: "faqan-safaraliyev",     name: "Fəqan Səfərəliyev",    role: "Главный оценщик",              imageUrl: null },
       { id: "nahid-ibrahim",         name: "Nahid İbrahim",         role: "Главный бухгалтер",            imageUrl: null },
       { id: "sahin-allahverdiyev",   name: "Şahin Allahverdiyev",  role: "Помощник оценщика",            imageUrl: null },
       { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Помощник оценщика",            imageUrl: null },
-      { id: "samira-rahimova",       name: "Samirə Rəhimova",      role: "Заместитель директора",        imageUrl: null },
+      
       { id: "aysel-rahimova",        name: "Aysel Rəhimova",       role: "Офис-менеджер",                imageUrl: null },
     ],
   },
