@@ -16,7 +16,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://premiumqiymetlendirme.az"),
+  metadataBase: new URL("https://premiumqiymetlendirime.az"),
   title: {
     default: "Premium Qiymətləndirmə MMC | Daşınmaz Əmlak və Biznes Qiymətləndirilməsi",
     template: "%s | Premium Qiymətləndirmə MMC",
@@ -26,24 +26,55 @@ export const metadata: Metadata = {
   keywords: [
     "qiymətləndirmə",
     "daşınmaz əmlak qiymətləndirmə",
-    "biznes qiymətləndirmə",
-    "əmlak ekspertizası",
-    "Bakı qiymətləndirmə şirkəti",
+    "əmlak ekspertizası Bakı",
+    "biznes qiymətləndirmə Azərbaycan",
+    "əmlak qiymətləndirici",
+    "mənzil qiymətləndirmə Bakı",
+    "kommersiya əmlak qiymətləndirmə",
+    "qiymətləndirmə şirkəti Bakı",
+    "peşəkar qiymətləndirici",
+    "оценка недвижимости Баку",
+    "оценщик недвижимости Азербайджан",
+    "оценка бизнеса Баку",
+    "оценочная компания Баку",
   ],
   authors: [{ name: "Premium Qiymətləndirmə MMC" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://premiumqiymetlendirime.az",
+  },
   openGraph: {
     title: "Premium Qiymətləndirmə MMC",
     description:
       "Daşınmaz əmlak, biznes və aktivlərin dəqiq, etibarlı və sürətli qiymətləndirilməsi.",
-    url: "https://premiumqiymetlendirme.az",
+    url: "https://premiumqiymetlendirime.az",
     siteName: "Premium Qiymətləndirmə MMC",
-    images: [{ url: "/logo.svg", width: 512, height: 512 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "az_AZ",
     type: "website",
   },
   icons: {
     icon: "/logo.svg",
   },
+};
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Premium Qiymətləndirmə MMC",
+  description: "Bakıda peşəkar daşınmaz əmlak və biznes qiymətləndirilməsi",
+  url: "https://premiumqiymetlendirime.az",
+  telephone: "+994503801502",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bakı",
+    addressCountry: "AZ",
+  },
+  areaServed: "AZ",
+  serviceType: "Qiymətləndirmə xidmətləri",
 };
 
 export default function RootLayout({
@@ -57,6 +88,10 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-body bg-offwhite text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>

@@ -1,18 +1,32 @@
 import type { MetadataRoute } from "next";
-import { content } from "@/lib/content";
+import { listNews } from "@/lib/news-store";
 
-const baseUrl = "https://premiumqiymetlendirme.az";
+const baseUrl = "https://premiumqiymetlendirime.az";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/xidmetler", "/haqqimizda", "/xeberler", "/elaqe", "/estimate"].map((path) => ({
-    url: `${baseUrl}${path}`,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const homeRoute = {
+    url: baseUrl,
     lastModified: new Date(),
-  }));
+    changeFrequency: "weekly" as const,
+    priority: 1.0,
+  };
 
-  const newsRoutes = content.az.news.map((article) => ({
+  const staticRoutes = ["/xidmetler", "/haqqimizda", "/xeberler", "/estimate", "/elaqe"].map(
+    (path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })
+  );
+
+  const news = await listNews();
+  const newsRoutes = news.map((article) => ({
     url: `${baseUrl}/xeberler/${article.slug}`,
-    lastModified: new Date(article.date),
+    lastModified: new Date(article.publishedAt),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
   }));
 
-  return [...staticRoutes, ...newsRoutes];
+  return [homeRoute, ...staticRoutes, ...newsRoutes];
 }
