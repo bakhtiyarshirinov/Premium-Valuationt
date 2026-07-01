@@ -46,6 +46,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://premiumqiymetlendirime.az",
   },
+  verification: {
+    google: "9qKLt20bkdVITjdWUS8Io6yzG5bLOnL1ULnH6EIeigw",
+  },
   openGraph: {
     title: "Premium Qiymətləndirmə MMC",
     description:
