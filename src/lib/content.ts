@@ -325,7 +325,7 @@ const az: SiteContent = {
       { id: "farqana-hamidli",       name: "Fərqanə Həmidli",      role: "Qiymətləndirici",              imageUrl: null },
       { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Qiymətləndirici Köməkçisi",    imageUrl: null },
       { id: "xalil-ramazanov",       name: "Xəlil Ramazanov",      role: "Qiymətləndirici",              imageUrl: null },
-      { id: "aysel-rahimova",        name: "Aysel Qurbanova",       role: "Office Manager",               imageUrl: null },
+      { id: "sevinc-isayeva",        name: "Sevinc İsayeva",       role: "Office Manager",               imageUrl: null },
     ],
   },
   newsSection: {
@@ -628,7 +628,7 @@ const ru: SiteContent = {
       { id: "baxtiyar-shirinov",     name: "Bəxtiyar Şirinov",     role: "Помощник оценщика",            imageUrl: null },
       { id: "xalil-ramazanov",       name: "Халил Рамазанов",      role: "Оценщик",                      imageUrl: null },
       
-      { id: "aysel-rahimova",        name: "Aysel Rəhimova",       role: "Офис-менеджер",                imageUrl: null },
+      { id: "sevinc-isayeva",        name: "Севиндж Исаева",       role: "Офис-менеджер",                imageUrl: null },
     ],
   },
   newsSection: {
